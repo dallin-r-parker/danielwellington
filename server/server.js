@@ -11,10 +11,14 @@ app.use(express.static(`${__dirname}./../public`))
 app.use(cors())
 
 // MASSIVE ========================================
-const massiveUri = 'jdbc:postgresql://babar.elephantsql.com:5432/dlvqnupv'
+const massiveUri = 'postgres://dlvqnupv:UUhj9uVaaBvWB4AnAxOkc3AZWM4QoKLF@babar.elephantsql.com:5432/dlvqnupv'
 const massiveServer = massive.connectSync({
   connectionString: massiveUri
 })
+
+app.set('db', massiveServer)
+const db = app.get('db')
+const dbCtrl = require('./dbCtrl')
 
 
 // LISTENING ON PORT ========================================
