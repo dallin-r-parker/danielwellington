@@ -1,0 +1,17 @@
+.nav-main-container {
+  z-index: 1000;
+  width: 100%;
+  background: lightgray;
+
+  .top-logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+  }
+
+  .nav-listoptions {
+    display: flex;
+    justify-content: center;
+    background: lightyellow;
+  }
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Lusitana|Muli:300,400,600');
+// FONTS ==========================================
+$primary-font: 'Muli', 'sans-serif';
+$fancy-font: 'Lusitana', 'sans-serif';
+
+// COLORS ==========================================
+$navFcolor: #fff;
+$navNavy: #192638;
+$watch-title: #747474;
+$watch-details: #787878;
+$dark-text: #00081c;
+$light-subtext: #AAAAAA;
+$shopnow-blackpearl: #000E22;
+$gold-text: #CDBC7A;
+
+
+@mixin navtitle {
+  font-family: $primary-font;
+  color: $navFcolor;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  @include navtitle;
+}

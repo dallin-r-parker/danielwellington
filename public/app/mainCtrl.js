@@ -1,5 +1,4 @@
-angular.module('app').controller('mainCtrl', function($scope) {
+angular.module('app').controller('mainCtrl', ($scope) => {
 
-$scope.broken = 'working'
 
 });
