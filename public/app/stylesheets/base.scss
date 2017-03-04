@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lusitana|Muli:300,400,600');
 // FONTS ==========================================
-$primary-font: 'Muli', 'sans-serif';
-$fancy-font: 'Lusitana', 'sans-serif';
+$primary-font: 'Muli', sans-serif;
+$fancy-font: 'Lusitana', sans-serif;
 
 // COLORS ==========================================
 $navFcolor: #fff;
@@ -15,12 +15,14 @@ $gold-text: #CDBC7A;
 
 
 @mixin navtitle {
-  font-family: $primary-font;
-  color: $navFcolor;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-h3 {
-  @include navtitle;
+  font-family: "Muli", sans-serif;
+  color: #fff;
+  font-size: .9rem;
+  letter-spacing: 2.25px;
+  text-transform: uppercase;
+  padding: 17px 0px 2px 0px;
+  margin-left: 15px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0,14,34,-0.9);
+  cursor: pointer;
 }
