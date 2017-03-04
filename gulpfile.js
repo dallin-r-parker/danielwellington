@@ -4,22 +4,25 @@ const babel = require('gulp-babel')
 const sass = require('gulp-sass')
 const nodemon = require('nodemon');
 
-const basePath = './public/app/'
-const resetpath = './public/reset.scss'
+
 // DECLARE FILE PATHS ========================================
+const basePath = './public/app/'
+const resetpath = `${basePath}stylesheets/reset.scss`
+const baseStyle = `${basePath}stylesheets/base.scss`
 const paths = {
-  jsSrc: [`${basePath}app.js`, `${basePath}*.js`],
-  sassSource: [`${resetpath}`],
+  jsSrc: [`${basePath}app.js`, `${basePath}*.js`, `${basePath}/directives/**/*.js`],
+  sassSource: [`${resetpath}`, `${baseStyle}`, `${basePath}stylesheets/*.scss`],
   server: './server/server.js'
 }
+
 // DEFINE TASKS ========================================
-gulp.task('server', () =>{
+gulp.task('server', () => {
   nodemon({
     'script': paths.server
   })
 })
 
-gulp.task('js-bundle', () =>{
+gulp.task('js-bundle', () => {
   gulp.src(paths.jsSrc)
   .pipe(babel({
     presets: ['es2015']

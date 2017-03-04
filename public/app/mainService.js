@@ -1,4 +1,4 @@
-angular.module('app').service('mainService', function($http) {
+angular.module('app').service('mainService', ($http) => {
 
 
 });
