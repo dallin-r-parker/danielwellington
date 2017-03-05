@@ -1,7 +1,4 @@
 angular.module('app').controller('navCtrl', ($scope) => {
 
-
-  $('.nav-listoptions').scrollTop((e) => {
-    console.log(e);
-  });
+// TODO: add sticking navbar
 });
