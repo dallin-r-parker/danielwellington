@@ -15,8 +15,9 @@ $gold-text: #CDBC7A;
 
 
 @mixin navtitle {
-  font-family: "Muli", sans-serif;
-  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  font-family: $primary-font;
+  color: $navFcolor;
   font-size: .9rem;
   letter-spacing: 2.25px;
   text-transform: uppercase;
