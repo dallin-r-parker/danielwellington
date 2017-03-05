@@ -1,7 +1,8 @@
+@import 'base.scss';
+
 .nav-main-container {
   z-index: 1000;
   width: 100%;
-  background: lightgray;
 
   .top-logo-container {
     display: flex;
@@ -12,6 +13,14 @@
   .nav-listoptions {
     display: flex;
     justify-content: center;
-    background: lightyellow;
+    background: rgba(0, 0, 0, .4);
+    padding-bottom: 17px;
+    p {
+      @include navtitle;
+      &:hover {
+        border-bottom: 1px solid white;
+        transition: all ease-in-out .4s;
+      }
+    }
   }
 }
